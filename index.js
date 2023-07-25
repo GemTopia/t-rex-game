@@ -2148,8 +2148,22 @@
             // }
             console.log(Number(highScoreStr))
             localStorage.setItem('score',Number(highScoreStr))
-            document.cookie = `score=${Number(highScoreStr)};domain=.kveh.ir;SameSite=None;Secure`
-            document.location.replace('http://gem.kveh.ir/result/1')
+            // top.postMessage(Number(highScoreStr),'http://localhost:3000/result/1')
+            // const popup = window.open()
+            // popup.postMessage(Number(highScoreStr), 'http://localhost:3000/result/1');
+            // document.cookie = `score=${Number(highScoreStr)};domain=gem.kveh.ir;SameSite=None;Secure`
+            document.location.replace(`http://gem.kveh.ir/result/1${Number(highScoreStr)*17-68}`)
+            // var receiver;
+            // if (document.getElementById("receiver")) {
+            // receiver = document.getElementById("receiver");
+
+      // Get a reference to the 'Send Message' button.
+      // var btn = document.getElementById("send");
+    //         receiver.contentWindow?.postMessage(
+    //         {score:localStorage.getItem('score')},
+    //         "http://localhost:3000/result/1"
+    //         );
+    // }
         },
 
         /**
@@ -2771,18 +2785,8 @@ function onDocumentLoad() {
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
 
-window.onload = function() {
-  // Get a reference to the div on the page that will display the
-  // message text.
-  var receiver;
-    if (document.getElementById("receiver")) {
-      receiver = document.getElementById("receiver");
-
-      // Get a reference to the 'Send Message' button.
-      // var btn = document.getElementById("send");
-      receiver.contentWindow?.postMessage(
-        {score:localStorage.getItem('score')},
-        "http://gem.kveh.ir/result/1"
-      );
-    }
-}
+// window.onload = function() {
+//   // Get a reference to the div on the page that will display the
+//   // message text.
+  
+// }
