@@ -2152,7 +2152,7 @@
             // const popup = window.open()
             // popup.postMessage(Number(highScoreStr), 'http://localhost:3000/result/1');
             // document.cookie = `score=${Number(highScoreStr)};domain=gem.kveh.ir;SameSite=None;Secure`
-            document.location.replace(`http://gem.kveh.ir/result/1${Number(highScoreStr)*17-68}`)
+            document.location.replace(`http://gem.kveh.ir/result/1/${Number(highScoreStr)*17-68}`)
             // var receiver;
             // if (document.getElementById("receiver")) {
             // receiver = document.getElementById("receiver");
